@@ -1,3 +1,10 @@
+![n8n](https://img.shields.io/badge/n8n-automation-orange)
+![Parserdata API](https://img.shields.io/badge/Parserdata-AI%20Extraction-brightgreen)
+![Google Drive](https://img.shields.io/badge/Google%20Drive-file%20trigger-4285F4)
+![Notion](https://img.shields.io/badge/Notion-database-black)
+![AI Powered](https://img.shields.io/badge/AI-Powered-success)
+![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
+
 # Parserdata → Google Drive → Notion
 
 This n8n workflow watches a Google Drive folder for newly added invoices (PDF/image), sends the file to the Parserdata Extract API, then writes:
@@ -5,6 +12,8 @@ This n8n workflow watches a Google Drive folder for newly added invoices (PDF/im
 - One row into Invoices DB (Notion)
 
 - Multiple rows into Line Items DB (Notion), linked back to the invoice via a relation
+
+![Workflow overview](notion.png)
 
 ---
 
@@ -123,9 +132,9 @@ That backlink is what the workflow writes to.
 
 ### Step A — Create a Notion Integration (API token)
 
-Open: `https://www.notion.so/my-integrations`
+Open: `https://www.notion.so/profile/integrations`
 
-Click **New integration**
+Click **Create a new integration**
 
 Name: **n8n Parserdata**
 
@@ -138,8 +147,6 @@ Open **Access** and add:
 - Invoices DB
 
 - Line Items DB
-
-For each DB:
 
 If you skip this, n8n will fail with "database not found".
 
@@ -204,13 +211,12 @@ Then select this credential inside node:
 
 ## 6) Import the workflow into n8n
 
-In n8n, click Workflows
+In n8n:
 
-Click Import from File (or paste JSON)
-
-Paste the workflow JSON
-
-Save
+- Click Workflows
+- Click Import from File (or paste JSON)
+- Paste the workflow JSON
+- Save
 
 ## 7) Configure the workflow placeholders
 
@@ -282,19 +288,23 @@ Invoice row should show linked items in Line Items → Relation
 
 ---
 
-## Security notes (important for GitHub)
+## Support
 
-Never commit real credential IDs, API keys, or database IDs
+If you need help with setup, customization, or production integration:
 
-Keep placeholders like:
+- Open a GitHub issue in this repository
+- Contact the Parserdata team at `support@parserdata.com`
+- Request integration guidance for custom workflows (ERP, accounting systems, BI tools, etc.)
 
-- `YOUR_DRIVE_FOLDER_ID`
+We're happy to assist with:
 
-- `YOUR_NOTION_INVOICES_DB_ID`
+- n8n deployment and configuration
+- Advanced Notion database design
+- Google Drive / document automation setup
+- Custom extraction schemas
+- API-based integrations
 
-- `YOUR_NOTION_LINE_ITEMS_DB_ID`
-
-- `YOUR_PARSERDATA_HTTP_HEADER_AUTH_ID`
+For enterprise use cases or tailored automation pipelines, please reach out directly.
 
 ---
 
