@@ -5,7 +5,7 @@
 ![AI Powered](https://img.shields.io/badge/AI-Powered-success)
 ![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 
-# Parserdata → Google Drive → Notion
+# ParserData → Google Drive → Notion
 
 This n8n workflow watches a Google Drive folder for newly added invoices (PDF/image), sends the file to the Parserdata Extract API, then writes:
 
