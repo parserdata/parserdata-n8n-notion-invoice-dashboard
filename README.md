@@ -13,6 +13,13 @@ This n8n workflow watches a Google Drive folder for newly added invoices (PDF/im
 
 - Multiple rows into Line Items DB (Notion), linked back to the invoice via a relation
 
+## Official ParserData pages
+
+- **Official workflow page:** https://parserdata.com/integrations/n8n/notion-invoice-dashboard
+- **n8n integration hub:** https://parserdata.com/integrations/n8n
+- **API reference:** https://parserdata.com/parserdata-api
+- **Pricing:** https://parserdata.com/pricing
+
 ![Workflow overview](notion.png)
 
 ---
