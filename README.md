@@ -208,7 +208,7 @@ Set:
 
 - Header Name: Authorization
 
--Header Value: Bearer pd_live_YOUR_API_KEY
+-Header Value: pd_live_YOUR_API_KEY
 
 Save
 
